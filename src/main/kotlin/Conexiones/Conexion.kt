@@ -1,6 +1,8 @@
+import Centro.Alumno
+import Centro.Aula
+import Centro.Ordenador
 import Conexiones.Constantes
 import java.sql.*
-import java.util.ArrayList
 
 object Conexion {
     // ********************* Atributos *************************
@@ -39,6 +41,89 @@ object Conexion {
             cod = -1
         }
         return cod
+    }
+
+
+    fun addAlumno(alumno:Alumno):Int{
+        var cod = 0
+        val sentencia = ("INSERT INTO " + Constantes.tablaAlumno + " VALUES ('" + alumno.dni + "'," + "'" + alumno.nombre + "','"
+                + alumno.apellido1 + "'," + "'" + alumno.apellido2 + "'" + ", " + alumno.codCurso +");")
+        try {
+            abrirConexion()
+
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        } catch (sq: SQLException) {
+            //println("Error al insertar")
+            cod = sq.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun addAula(aula: Aula):Int{
+        var cod = 0
+        val sentencia = ("INSERT INTO " + Constantes.tablaAula + " VALUES (default,'" + aula.descripcion + "'," + "'" + aula.nombreCurso + "',"
+                + aula.codCurso+ ");")
+        try {
+            abrirConexion()
+
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        } catch (sq: SQLException) {
+            //println("Error al insertar")
+            cod = sq.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+
+    fun addOrdenador(ordenador: Ordenador):Int{
+        var cod = 0
+        val sentencia = ("INSERT INTO ${Constantes.tablaOrdenador} VALUES (DEFAULT, '${ordenador.cpu}', ${ordenador.ram}, " +
+                "${ordenador.hdd}  ,${ordenador.codAula} );")
+        try {
+            abrirConexion()
+            println(sentencia)
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex: SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+
+
+
+//    fun obtenerCodAula(codAula: String):Persona?{
+//        var p : Persona? = null
+//        var registros: ResultSet? = null
+//        try {
+//            abrirConexion()
+//            val sentencia = "SELECT * FROM " + Constantes.TablaPersonas + " WHERE dni = '" + dni + "'"
+//            registros = sentenciaSQL!!.executeQuery(sentencia)
+//            if (registros!!.next()) {
+//                p =  Persona(
+//                    registros.getString("dni"),
+//                    registros.getString("nombre"),
+//                    registros.getString(3),
+//                    registros.getInt("tfno")
+//                )
+//            }
+//        } catch (ex: SQLException) {
+//        } finally {
+//            cerrarConexion()
+//        }
+//
+//        return p
+//    }
+
+    fun addOrdenador(){
+
+    }
+
+    fun addAula(){
+
     }
 
 
