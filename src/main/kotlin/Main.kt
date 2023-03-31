@@ -19,7 +19,9 @@ fun main(args: Array<String>) {
         println(e)
     }
 
-//
+    Conexion.abrirConexion()
+    Conexion.cerrarConexion()
+
 //    when(seleccion){
 //        1-> Insertar()
 //        2-> BuscarPorCodigo()

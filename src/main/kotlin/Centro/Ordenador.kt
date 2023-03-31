@@ -2,14 +2,14 @@ package Centro
 
 class Ordenador {
 
-    var cod: Int
+    var sn: Int
     var cpu: String
     var ram: Int
     var hd: Int
-    var codAula: String
+    var codAula: Int
 
-    constructor(cod: Int, cpu: String, ram: Int, hd: Int, codAula: String) {
-        this.cod = cod
+    constructor(cod: Int, cpu: String, ram: Int, hd: Int, codAula: Int) {
+        this.sn = cod
         this.cpu = cpu
         this.ram = ram
         this.hd = hd
@@ -17,7 +17,7 @@ class Ordenador {
     }
 
     override fun toString(): String {
-        return "Aula(cod=$cod, cpu='$cpu', ram=$ram, hd=$hd, codAula='$codAula')"
+        return "Aula(cod=$sn, cpu='$cpu', ram=$ram, hd=$hd, codAula='$codAula')"
     }
 
 }

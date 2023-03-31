@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="457b5963-61af-40da-8b5a-6c1a69845fa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Alumno.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestionAulaInformatica.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gestionAulas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Centro/Alumno.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Alumno.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Centro/Aula.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Aula.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Centro/Ordenador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Ordenador.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Constantes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Constantes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Factorias/Factoria.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Factorias/Factoria.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,8 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "S:/Mi unidad/1ºDAM/1 - Programación/2 - Ejercicios/2 - Kotlin/12 - BD y Ficheros/gestionAulas"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,12 +72,20 @@
       <option name="project" value="LOCAL" />
       <updated>1680270821988</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Avanzadas clases Aula, Alumno y Ordenador">
+      <created>1680271518181</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680271518181</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creación de clases vacias y menú principal con control de errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación de clases vacias y menú principal con control de errores" />
+    <MESSAGE value="Avanzadas clases Aula, Alumno y Ordenador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avanzadas clases Aula, Alumno y Ordenador" />
   </component>
 </project>

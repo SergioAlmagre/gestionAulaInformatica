@@ -2,14 +2,14 @@ package Centro
 
 class Aula {
 
-      var codAula:String
+      var codAula:Int
       var descripcion: String
       var nombreCurso: String
       var codCurso: Int
       var ordenadores: ArrayList<Ordenador>
 
 
-    constructor(codAula: String, descripcion: String, nombreCurso: String, codCurso: Int) {
+    constructor(codAula: Int, descripcion: String, nombreCurso: String, codCurso: Int) {
         this.codAula = codAula
         this.descripcion = descripcion
         this.nombreCurso = nombreCurso
