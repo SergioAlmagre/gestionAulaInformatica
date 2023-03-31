@@ -1,0 +1,4 @@
+package Conexiones
+
+object Conexion {
+}

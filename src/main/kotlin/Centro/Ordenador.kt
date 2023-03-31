@@ -1,0 +1,4 @@
+package Centro
+
+class Ordenador {
+}

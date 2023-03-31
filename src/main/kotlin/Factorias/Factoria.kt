@@ -1,0 +1,6 @@
+package Factorias
+
+object Factoria {
+
+
+}
