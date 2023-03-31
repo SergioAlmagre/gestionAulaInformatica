@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="457b5963-61af-40da-8b5a-6c1a69845fa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gestionAulaInformatica.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Aula.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Ordenador.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Constantes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Factorias/Factoria.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Alumno.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Centro/Aula.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Aula.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Centro/Ordenador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Ordenador.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -69,9 +58,19 @@
       <option name="presentableId" value="Default" />
       <updated>1680269821430</updated>
     </task>
+    <task id="LOCAL-00001" summary="Creación de clases vacias y menú principal con control de errores">
+      <created>1680270821988</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680270821988</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Creación de clases vacias y menú principal con control de errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación de clases vacias y menú principal con control de errores" />
   </component>
 </project>
