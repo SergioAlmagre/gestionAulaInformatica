@@ -15,9 +15,7 @@ object Factoria {
         var hdds = arrayOf(250,500,750,1000,1500,2000)
         var hdd = hdds[Random.nextInt(0,hdds.size-1)]
 
-        var ordenador = Ordenador(0,cpu,ram,hdd,codAula)
-
-        return ordenador
+        return Ordenador(0,cpu,ram,hdd,codAula)
     }
 
     fun factoriaAlumno():Alumno{
@@ -30,7 +28,7 @@ object Factoria {
         var apellido2 = apellidos[Random.nextInt(0,apellidos.size-1)]
         var codCurso = Random.nextInt(0,300)
 
-        return  Alumno(dni, nombre,apellido1,apellido2,codCurso )
+        return Alumno(dni, nombre,apellido1,apellido2,codCurso )
     }
 
     fun factoriaAula():Aula{
@@ -41,8 +39,7 @@ object Factoria {
         var nombreCurso = nombresCursos[Random.nextInt(0,nombresCursos.size-1)]
         var codCurso = Random.nextInt(0,200)
 
-        var aula = Aula(0,descripciones,nombreCurso,codCurso)
-        return aula
+        return Aula(0,descripciones,nombreCurso,codCurso)
     }
 
 

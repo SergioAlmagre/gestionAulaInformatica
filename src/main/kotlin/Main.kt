@@ -34,6 +34,14 @@ fun main(args: Array<String>) {
     Conexion.addOrdenador(Factoria.factoriaOrdenador(201))
 
 
+//    var alumnos = Conexion.obtenerAlumnoArrayList()
+//    for (e in alumnos){
+//        println(e)
+//    }
+
+
+
+
 //    when(seleccion){
 //        1-> Insertar()
 //        2-> BuscarPorCodigo()

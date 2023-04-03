@@ -83,7 +83,6 @@ object Conexion {
                 "${ordenador.hdd}  ,${ordenador.codAula} );")
         try {
             abrirConexion()
-            println(sentencia)
             this.sentenciaSQL!!.executeUpdate(sentencia)
         }catch (ex: SQLException){
             cod = ex.errorCode
@@ -91,6 +90,47 @@ object Conexion {
         cerrarConexion()
         return cod
     }
+
+    fun modRam(cantidadRam:Int, sn:Int):Int{
+        var cod = 0
+        val sentencia = ("UPDATE ${Constantes.tablaOrdenador} SET RAM = $cantidadRam WHERE " +
+                "SN = $sn ;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun obtenerAlumnoArrayList(): ArrayList<Alumno>{
+        var datos: ArrayList<Alumno> = ArrayList()
+        var registros: ResultSet? = null
+        var cod: Int = 0
+
+        try{
+            while (registros!!.next()){
+                datos.add(
+                    Alumno(
+                    registros.getString("dni"),
+                    registros.getString("nombre"),
+                    registros.getString("apellido1"),
+                    registros.getString("apellido2"),
+                    registros.getInt(0)
+                    )
+                )
+            }
+
+        }catch ( ex:SQLException){
+            println(ex)
+        }
+        cerrarConexion()
+    return datos
+    }
+
+
 
 
 
@@ -118,13 +158,6 @@ object Conexion {
 //        return p
 //    }
 
-    fun addOrdenador(){
-
-    }
-
-    fun addAula(){
-
-    }
 
 
 
