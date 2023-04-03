@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="457b5963-61af-40da-8b5a-6c1a69845fa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mariadb_java_client_2_7_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Factorias/Factoria.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Factorias/Factoria.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680279896627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Conexiones obtener datos">
+      <created>1680515531293</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680515531293</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Añadir archivos .jar conexión BBDD">
+      <created>1680515579519</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680515579520</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -120,6 +131,8 @@
     <MESSAGE value="Avanzadas clases Aula, Alumno y Ordenador" />
     <MESSAGE value="Avanzadas en las clases Conexión y Constantes" />
     <MESSAGE value="Avances con conexiones add alumno, ordenador y aula" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avances con conexiones add alumno, ordenador y aula" />
+    <MESSAGE value="Conexiones obtener datos" />
+    <MESSAGE value="Añadir archivos .jar conexión BBDD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir archivos .jar conexión BBDD" />
   </component>
 </project>
