@@ -122,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680515579520</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Advances in the Main and Conexion">
+      <created>1680520390822</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680520390822</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,6 +140,7 @@
     <MESSAGE value="Avances con conexiones add alumno, ordenador y aula" />
     <MESSAGE value="Conexiones obtener datos" />
     <MESSAGE value="Añadir archivos .jar conexión BBDD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadir archivos .jar conexión BBDD" />
+    <MESSAGE value="Advances in the Main and Conexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Advances in the Main and Conexion" />
   </component>
 </project>

@@ -96,7 +96,7 @@ object Conexion {
 
 
 
-    //--------------------------MODIFICACIONES----------------------------
+    //--------------------------MODIFICACIONES ORDENADOR---------------------------
     fun modRam(cantidadRam:Int, sn:Int):Int{
         var cod = 0
         val sentencia = ("UPDATE ${Constantes.tablaOrdenador} SET RAM = $cantidadRam WHERE " +
@@ -152,6 +152,187 @@ object Conexion {
         cerrarConexion()
         return cod
     }
+
+
+    //--------------------------MODIFICACIONES ALUMNO---------------------------
+    fun modNombreAlumno(nombre:String, dni:String):Int{
+        var cod = 0
+        val sentencia = ("UPDATE ${Constantes.tablaAlumno} SET NOMBRE = '$nombre' WHERE " +
+                "UPPER (DNI) = '$dni' ;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun modApellido1Alumno(apellido1:String, dni:String):Int{
+        var cod = 0
+        val sentencia = ("UPDATE ${Constantes.tablaAlumno} SET APELLIDO1 = '$apellido1' WHERE " +
+                "UPPER (DNI) = '$dni' ;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun modApellido2Alumno(apellido2:String, dni:String):Int{
+        var cod = 0
+        val sentencia = ("UPDATE ${Constantes.tablaAlumno} SET APELLIDO2 = '$apellido2' WHERE " +
+                "UPPER (DNI) = '$dni' ;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun modCodCursoAlumno(codCurso:Int, dni:String):Int{
+        var cod = 0
+        val sentencia = ("UPDATE ${Constantes.tablaAlumno} SET CODCURSO = $codCurso WHERE " +
+                "UPPER (DNI) = '$dni' ;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+
+
+
+    //--------------------------MODIFICACIONES AULA--------------------------
+    fun modDescripcionAula(descripcion:String, codAula: Int):Int{
+        var cod = 0
+        val sentencia = ("UPDATE ${Constantes.tablaAula} SET DESCRIPCION = '$descripcion' WHERE " +
+                "CODAULA = $codAula ;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+    fun modNombreCursoAula(nombreCurso:String, codAula: Int):Int{
+        var cod = 0
+        val sentencia = ("UPDATE ${Constantes.tablaAula} SET NOMBRECURSO = '$nombreCurso' WHERE " +
+                "CODAULA = $codAula ;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun modCodCursoAula(codCurso:Int, codAula: Int):Int{
+        var cod = 0
+        val sentencia = ("UPDATE ${Constantes.tablaAula} SET CODCURSO = $codCurso WHERE " +
+                "CODAULA = $codAula ;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+
+
+
+
+
+
+
+    //-----------------------BORRADO DE DATOS------------------------------------------
+    fun borrarTodosLosAlumnos():Int{
+        var cod = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaAlumno};")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun borrarTodasAulas():Int{
+        var cod = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaAula};")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun borrarTodosLosOrdenadores():Int{
+        var cod = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaOrdenador};")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+
+
+    //----------------------OBTENER UN DATOS DE UN ELEMENTO-------------------------------
+    fun obtenerAlumno(dni: String):Alumno?{
+        var p : Alumno? = null
+        var registros: ResultSet? = null
+        try {
+            abrirConexion()
+            val sentencia = "SELECT * FROM " + Constantes.tablaAlumno + " WHERE dni = '" + dni + "'"
+            registros = sentenciaSQL!!.executeQuery(sentencia)
+            if (registros!!.next()) {
+                p =  Alumno(
+                    registros.getString("dni"),
+                    registros.getString("nombre"),
+                    registros.getString("apellido1"),
+                    registros.getString("apellido2"),
+                    registros.getInt(5),
+                )
+            }
+        } catch (ex: SQLException) {
+        } finally {
+            cerrarConexion()
+        }
+
+        return p
+    }
+
+
+
+
 
 
 

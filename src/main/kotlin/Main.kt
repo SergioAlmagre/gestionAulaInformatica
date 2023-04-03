@@ -1,5 +1,6 @@
 import Centro.Alumno
 import Factorias.Factoria
+import kotlin.random.Random
 
 fun main(args: Array<String>) {
 
@@ -14,9 +15,11 @@ fun main(args: Array<String>) {
 //                        "5 - Insertar alumn@\n" +
 //                        "3 - Modificar datos de un aula\n" +
 //                        "3 - Modificar datos de un ordenador\n" +
-//                        "3 - Modificar datos de un alumno\n" +
-//                        "2 - Mostrar ordenador por serial number \n" +
-//                        "8 - Mostrar todos los alumnos\n" +
+//                        "3 - Modificar datos de un alumn@\n" +
+//                        "2 - Mostrar un aula por codigo de aula \n" +
+//                        "2 - Mostrar un ordenador por serial number \n" +
+//                        "2 - Mostrar un alumn@ por DNI \n" +
+//                        "8 - Mostrar todos los alumn@s\n" +
 //                        "9 - Mostrar todas las aulas\n" +
 //                        "10 - Mostrar todos los ordenadores\n" +
 //                        "4 - Borrar por serial number\n" +
@@ -32,16 +35,32 @@ fun main(args: Array<String>) {
 //        println(e)
 //    }
 
+meterDatosACascoporrillo()
 
-    Conexion.modRam(128,1)
-    Conexion.modCpu("Ryzen",1)
-    Conexion.modHdd(2000,1)
-    Conexion.modCodAula(202,1)
 
+
+//    Conexion.borrarTodosLosAlumnos()
+//    Conexion.borrarTodasAulas()
+//    Conexion.borrarTodosLosOrdenadores()
+
+//    Conexion.modDescripcionAula("Esto es un test",1)
+//    Conexion.modNombreCursoAula("test",1)
+//    Conexion.modCodCursoAula(222,1)
+
+//    Conexion.modNombreAlumno("SERGIO","05693561A")
+//    Conexion.modApellido1Alumno("NUÑEZ","05693561A")
+//    Conexion.modApellido2Alumno("BAUTISTA","05693561A")
+//    Conexion.modCodCursoAlumno(222,"05693561A")
+
+//    Conexion.modRam(128,1)
+//    Conexion.modCpu("Ryzen",1)
+//    Conexion.modHdd(2000,1)
+//    Conexion.modCodAula(202,1)
 
 //    Conexion.addAlumno(Factoria.factoriaAlumno())
 //    Conexion.addAula(Factoria.factoriaAula())
 //    Conexion.addOrdenador(Factoria.factoriaOrdenador(201))
+
 //    mostrarTodosLosOrdenadores()
 //    mostrarTodosLosAlumnos()
 //    mostrarTodasLasAulas()
@@ -82,3 +101,22 @@ fun mostrarTodasLasAulas(){
         println(e)
     }
 }
+
+fun meterDatosACascoporrillo(){
+    for (i in 0..40){
+        Conexion.addAlumno(Factoria.factoriaAlumno())
+        Conexion.addAula(Factoria.factoriaAula())
+        Conexion.addOrdenador(Factoria.factoriaOrdenador(Random.nextInt(100,300)))
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
