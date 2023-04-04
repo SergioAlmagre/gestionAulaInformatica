@@ -67,7 +67,7 @@ fun main(args: Array<String>) {
 }
 
     fun construirBbdd(){
-        var sentencia = ""
+        Conexion.crearBaseDeDatos()
         for (i in 0..6){
             print ("- ")
             Thread.sleep(500)
@@ -90,7 +90,7 @@ fun main(args: Array<String>) {
                 confirmacion = readln().toInt()
             }
             if (confirmacion == 1){
-                var sentencia = ""
+                Conexion.borrarBaseDeDatos()
             }
 
         }catch (ex:Exception){

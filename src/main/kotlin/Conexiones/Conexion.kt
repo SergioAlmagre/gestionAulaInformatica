@@ -500,6 +500,48 @@ object Conexion {
     }
 
 
+//    -------------------CREACION Y BORRADO DE LA BASE DE DATOS
+
+
+    fun crearBaseDeDatos(){
+        var cod = 0
+        val sentencia = ("CREATE TABLE oficina (\n" +
+                "  codigo_oficina VARCHAR(10) NOT NULL,\n" +
+                "  ciudad VARCHAR(30) NOT NULL,\n" +
+                "  pais VARCHAR(50) NOT NULL,\n" +
+                "  region VARCHAR(50) DEFAULT NULL,\n" +
+                "  codigo_postal VARCHAR(10) NOT NULL,\n" +
+                "  telefono VARCHAR(20) NOT NULL,\n" +
+                "  linea_direccion1 VARCHAR(50) NOT NULL,\n" +
+                "  linea_direccion2 VARCHAR(50) DEFAULT NULL,\n" +
+                "  PRIMARY KEY (codigo_oficina)\n" +
+                ");")
+        try {
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+            println(ex)
+        }
+        println("Base de datos creada con éxito")
+    }
+    fun borrarBaseDeDatos(){
+        var cod = 0
+        val sentencia = ("DROP TABLE ${Constantes.tablaOrdenador};\n" +
+                         "DROP TABLE ${Constantes.tablaAlumno};\n" +
+                         "DROP TABLE ${Constantes.tablaAula};")
+        try {
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+            println(ex)
+        }
+        println("Base de datos borrada con éxito")
+    }
+
 
 
 

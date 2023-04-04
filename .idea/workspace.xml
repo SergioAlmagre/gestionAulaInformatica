@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="457b5963-61af-40da-8b5a-6c1a69845fa7" name="Changes" comment="">
+    <list default="true" id="457b5963-61af-40da-8b5a-6c1a69845fa7" name="Changes" comment="Avances en el menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Centro/Ordenador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Centro/Ordenador.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680538678709</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Habilitación y avance en la construcción del menú">
+      <created>1680649343372</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680649343372</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Avances en el menu">
+      <created>1680650976442</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680650976442</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -150,6 +162,8 @@
     <MESSAGE value="Añadir archivos .jar conexión BBDD" />
     <MESSAGE value="Advances in the Main and Conexion" />
     <MESSAGE value="fun cascoporrillo y comienzo de obtención de datos unitarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="fun cascoporrillo y comienzo de obtención de datos unitarios" />
+    <MESSAGE value="Habilitación y avance en la construcción del menú" />
+    <MESSAGE value="Avances en el menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avances en el menu" />
   </component>
 </project>
