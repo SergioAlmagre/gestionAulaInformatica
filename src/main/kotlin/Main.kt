@@ -23,18 +23,19 @@ fun main(args: Array<String>) {
                         "10 - Mostrar todos los alumn@s\n" +
                         "11 - Mostrar todas las aulas\n" +
                         "12 - Mostrar todos los ordenadores\n" +
-                        "13 - Borrar por serial number\n" +
-                        "14 - Borrar alumn@\n" +
-                        "15 - Borrar todos los ordenadores\n" +
-                        "16 - Borrar todos l@s alumn@s\n" +
-                        "17 - Borrar todas las aulas\n" +
-                        "18 - Destruir la base de datos\n" +
-                        "19 - Construir la base de datos\n" +
-                        "20 - Meter datos a cascoporrillo\n" +
-                        "21 - Salir\n"
+                        "13 - Borrar ordenador por serial number\n" +
+                        "14 - Borrar alumn@ por DNI\n" +
+                        "15 - Borrar aula por código" +
+                        "16 - Borrar todos los ordenadores\n" +
+                        "17 - Borrar todos l@s alumn@s\n" +
+                        "18 - Borrar todas las aulas\n" +
+                        "19 - Destruir la base de datos\n" +
+                        "20 - Construir la base de datos\n" +
+                        "21 - Meter datos a cascoporrillo\n" +
+                        "22 - Salir\n"
             )
             seleccion = readln().toInt()
-        } while (seleccion !in 1..21 && seleccion != 21)
+        } while (seleccion !in 1..22 && seleccion != 22)
     }catch (e:Exception){
         println(e)
     }
@@ -46,36 +47,123 @@ fun main(args: Array<String>) {
         4-> modOAula()
         5-> modOrdenador()
         6-> modAlumno()
-        7-> BorrarPorCodigo()
-        8-> BorrarTodos()
-        9-> Salir()
+        7-> mostrarAula()
+        8-> mostrarOrdenador()
+        9-> mostrarAlumno()
         10-> mostrarTodosLosAlumnos()
         11-> mostrarTodasLasAulas()
         12-> mostrarTodosLosOrdenadores()
-        13-> Salir()
-        14-> Salir()
-        15-> Conexion.borrarTodosLosOrdenadores()
-        16-> Conexion.borrarTodosLosAlumnos()
-        17-> Conexion.borrarTodasAulas()
-        18-> Salir()
-        19-> Salir()
-        20-> meterDatosACascoporrillo()
-        21-> println("Hasta la vista")
+        13-> borrarOrdenador()
+        14-> borrarAlumno()
+        15-> borrarAula()
+        16-> Conexion.borrarTodosLosOrdenadores()
+        17-> Conexion.borrarTodosLosAlumnos()
+        18-> Conexion.borrarTodasAulas()
+        19-> destruirBbdd()
+        20-> construirBbdd()
+        21-> meterDatosACascoporrillo()
+        22-> println("Hasta la vista")
+    }
+}
+
+    fun construirBbdd(){
+        var sentencia = ""
+        for (i in 0..6){
+            print ("- ")
+            Thread.sleep(500)
+        }
+    }
+    fun destruirBbdd(){
+        var eleccion = -1
+        var confirmacion = -1
+
+        try {
+            println("0 - Cancelar\n" +
+                    "1 - Borrar BBDD")
+            var eleccion = readln().toInt()
+
+            if (eleccion == 1){
+                println("Borrar la base de datos es un paso irreversible, ¿quieres hacerlo?\n" +
+                        "¿Estás serguro de destruir la bases de datos?\n" +
+                        "0 - Cancelar\n" +
+                        "1 - Borrar BBDD\n")
+                confirmacion = readln().toInt()
+            }
+            if (confirmacion == 1){
+                var sentencia = ""
+            }
+
+        }catch (ex:Exception){
+            println(ex)
+        }
+
+        if (eleccion == 0 || confirmacion == 0){
+            println("proceso cancelado")
+        }else{
+            println("Base de datos destruida")
+        }
+
     }
 
+    fun borrarAula(){
+        try {
+            var codAula = readln().toInt()
+            Conexion.borrarAula(codAula)
+        }catch (ex:Exception){
+            println(ex)
+        }
+        println("Borrado con éxito")
+    }
 
-//    Conexion.borrarOrdenador(20)
-//    Conexion.borrarAlumno("105618958")
-//    Conexion.borrarAula(21)
+    fun borrarOrdenador(){
+        try {
+            var sn = readln().toInt()
+            Conexion.borrarOrdenador(sn)
+        }catch (ex:Exception){
+            println(ex)
+        }
+        println("Borrado con éxito")
+    }
 
+    fun borrarAlumno(){
+        try {
+            var dni = readln()
+            Conexion.borrarAlumno(dni)
+        }catch (ex:Exception){
+            println(ex)
+        }
+        println("Borrado con éxito")
+    }
 
-//    println(Conexion.obtenerAlumno("105618958"))
-//    println(Conexion.obtenerAula(21))
-//    println(Conexion.obtenerOrdenador(25))
+    fun mostrarAula(){
+        try {
+            println("Introduce el código del aula que desees ver")
+            var codAula = readln().toInt()
+            println(Conexion.obtenerAula(codAula))
+        }catch (ex:Exception){
+            println(ex)
+        }
+    }
 
+    fun mostrarAlumno(){
+        try {
+            println("Introduce el DNI del alumno que desees ver")
+            var dni = readln()
+            println(Conexion.obtenerAlumno(dni))
+        }catch (ex:Exception){
+            println(ex)
+        }
+    }
 
-
-}
+    fun mostrarOrdenador(){
+        try {
+            println("Introduce el numero de serie del ordenador que desees ver")
+            var sn = readln().toInt()
+            println(Conexion.obtenerOrdenador(sn))
+        }catch (ex:Exception){
+            println(ex)
+        }
+    }
 
     fun modOrdenador(){
 
