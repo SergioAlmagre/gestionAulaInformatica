@@ -17,7 +17,8 @@ class Ordenador {
     }
 
     override fun toString(): String {
-        return "Aula(cod=$sn, cpu='$cpu', ram=$ram, hd=$hdd, codAula='$codAula')"
+        return "Ordenador(sn=$sn, cpu='$cpu', ram=$ram, hdd=$hdd, codAula=$codAula)"
     }
+
 
 }

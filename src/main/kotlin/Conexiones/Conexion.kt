@@ -2,6 +2,7 @@ import Centro.Alumno
 import Centro.Aula
 import Centro.Ordenador
 import Conexiones.Constantes
+import com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping
 import java.sql.*
 
 object Conexion {
@@ -259,52 +260,6 @@ object Conexion {
 
 
 
-
-
-
-
-    //-----------------------BORRADO DE DATOS------------------------------------------
-    fun borrarTodosLosAlumnos():Int{
-        var cod = 0
-        val sentencia = ("DELETE FROM ${Constantes.tablaAlumno};")
-        try{
-            abrirConexion()
-            this.sentenciaSQL!!.executeUpdate(sentencia)
-        }catch (ex:SQLException){
-            cod = ex.errorCode
-        }
-        cerrarConexion()
-        return cod
-    }
-
-    fun borrarTodasAulas():Int{
-        var cod = 0
-        val sentencia = ("DELETE FROM ${Constantes.tablaAula};")
-        try{
-            abrirConexion()
-            this.sentenciaSQL!!.executeUpdate(sentencia)
-        }catch (ex:SQLException){
-            cod = ex.errorCode
-        }
-        cerrarConexion()
-        return cod
-    }
-
-    fun borrarTodosLosOrdenadores():Int{
-        var cod = 0
-        val sentencia = ("DELETE FROM ${Constantes.tablaOrdenador};")
-        try{
-            abrirConexion()
-            this.sentenciaSQL!!.executeUpdate(sentencia)
-        }catch (ex:SQLException){
-            cod = ex.errorCode
-        }
-        cerrarConexion()
-        return cod
-    }
-
-
-
     //----------------------OBTENER UN DATOS DE UN ELEMENTO-------------------------------
     fun obtenerAlumno(dni: String):Alumno?{
         var p : Alumno? = null
@@ -330,8 +285,52 @@ object Conexion {
         return p
     }
 
+    fun obtenerAula(codAula: Int):Aula?{
+        var p : Aula? = null
+        var registros: ResultSet? = null
+        try {
+            abrirConexion()
+            val sentencia = "SELECT * FROM  ${Constantes.tablaAula} WHERE CODAULA = $codAula; "
+            registros = sentenciaSQL!!.executeQuery(sentencia)
+            if (registros!!.next()) {
+                p =  Aula(
+                    registros.getInt(1),
+                    registros.getString("descripcion"),
+                    registros.getString("nombrecurso"),
+                    registros.getInt(4),
+                )
+            }
+        } catch (ex: SQLException) {
+        } finally {
+            cerrarConexion()
+        }
 
+        return p
+    }
 
+    fun obtenerOrdenador(sn: Int):Ordenador?{
+        var p : Ordenador? = null
+        var registros: ResultSet? = null
+        try {
+            abrirConexion()
+            val sentencia = "SELECT * FROM  ${Constantes.tablaOrdenador} WHERE SN = $sn; "
+            registros = sentenciaSQL!!.executeQuery(sentencia)
+            if (registros!!.next()) {
+                p =  Ordenador(
+                    registros.getInt(1),
+                    registros.getString("cpu"),
+                    registros.getInt(3),
+                    registros.getInt(4),
+                    registros.getInt(5),
+                )
+            }
+        } catch (ex: SQLException) {
+        } finally {
+            cerrarConexion()
+        }
+
+        return p
+    }
 
 
 
@@ -415,6 +414,90 @@ object Conexion {
     }
 
 
+
+
+    //-----------------------BORRADO DE DATOS POR LOTES------------------------------------------
+    fun borrarTodosLosAlumnos():Int{
+        var cod = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaAlumno};")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun borrarTodasAulas():Int{
+        var cod = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaAula};")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun borrarTodosLosOrdenadores():Int{
+        var cod = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaOrdenador};")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+
+
+    //-----------------------BORRADO DE DATOS POR UNIDAD--------------------------------------
+    fun borrarOrdenador(sn:Int):Int{
+        var cod = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaOrdenador} WHERE SN = $sn;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun borrarAula(codAula: Int):Int{
+        var cod = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaAula} WHERE CODAULA = $codAula;")
+        try{
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
+
+    fun borrarAlumno(dni:String):Int{
+        var cod: Int = 0
+        val sentencia = ("DELETE FROM ${Constantes.tablaAlumno} WHERE DNI = $dni")
+        try {
+            abrirConexion()
+            this.sentenciaSQL!!.executeUpdate(sentencia)
+
+        }catch (ex:SQLException){
+            cod = ex.errorCode
+        }
+        cerrarConexion()
+        return cod
+    }
 
 
 
