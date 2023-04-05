@@ -505,17 +505,28 @@ object Conexion {
 
     fun crearBaseDeDatos(){
         var cod = 0
-        val sentencia = ("CREATE TABLE oficina (\n" +
-                "  codigo_oficina VARCHAR(10) NOT NULL,\n" +
-                "  ciudad VARCHAR(30) NOT NULL,\n" +
-                "  pais VARCHAR(50) NOT NULL,\n" +
-                "  region VARCHAR(50) DEFAULT NULL,\n" +
-                "  codigo_postal VARCHAR(10) NOT NULL,\n" +
-                "  telefono VARCHAR(20) NOT NULL,\n" +
-                "  linea_direccion1 VARCHAR(50) NOT NULL,\n" +
-                "  linea_direccion2 VARCHAR(50) DEFAULT NULL,\n" +
-                "  PRIMARY KEY (codigo_oficina)\n" +
-                ");")
+        val sentencia = ("CREATE TABLE ALUMNO(\n" +
+                "    DNI VARCHAR2(9) PRIMARY KEY,\n" +
+                "    NOMBRE VARCHAR2(30),\n" +
+                "    APELLIDO1 VARCHAR2(30),\n" +
+                "    APELLIDO2 VARCHAR2(30),\n" +
+                "    CODCURSO NUMBER(4)\n" +
+                "    );\n" +
+                "    \n" +
+                "CREATE TABLE AULA(\n" +
+                "    CODAULA NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n" +
+                "    DESCRIPCION VARCHAR2(100),\n" +
+                "    NOMBRECURSO VARCHAR2(100),\n" +
+                "    CODCURSO NUMBER (4)\n" +
+                "    );\n" +
+                "    \n" +
+                "CREATE TABLE ORDENADOR(\n" +
+                "    SN NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,\n" +
+                "    CPU VARCHAR2(50),\n" +
+                "    RAM NUMBER (3),\n" +
+                "    HDD NUMBER (6),\n" +
+                "    CODAULA NUMBER (4)\n" +
+                "    );")
         try {
             abrirConexion()
             this.sentenciaSQL!!.executeUpdate(sentencia)
@@ -527,9 +538,9 @@ object Conexion {
     }
     fun borrarBaseDeDatos(){
         var cod = 0
-        val sentencia = ("DROP TABLE ${Constantes.tablaOrdenador};\n" +
-                         "DROP TABLE ${Constantes.tablaAlumno};\n" +
-                         "DROP TABLE ${Constantes.tablaAula};")
+        val sentencia = ("DROP TABLE IF EXISTS ${Constantes.tablaOrdenador};\n" +
+                         "DROP TABLE IF EXISTS ${Constantes.tablaAlumno};\n" +
+                         "DROP TABLE IF EXISTS ${Constantes.tablaAula};")
         try {
             abrirConexion()
             this.sentenciaSQL!!.executeUpdate(sentencia)

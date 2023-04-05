@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="457b5963-61af-40da-8b5a-6c1a69845fa7" name="Changes" comment="Avances en el menu">
+    <list default="true" id="457b5963-61af-40da-8b5a-6c1a69845fa7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680650976442</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="A falta de crear la sentencia de la creación de la base de datos completa">
+      <created>1680652922486</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680652922486</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -165,6 +172,7 @@
     <MESSAGE value="fun cascoporrillo y comienzo de obtención de datos unitarios" />
     <MESSAGE value="Habilitación y avance en la construcción del menú" />
     <MESSAGE value="Avances en el menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avances en el menu" />
+    <MESSAGE value="A falta de crear la sentencia de la creación de la base de datos completa" />
+    <option name="LAST_COMMIT_MESSAGE" value="A falta de crear la sentencia de la creación de la base de datos completa" />
   </component>
 </project>
