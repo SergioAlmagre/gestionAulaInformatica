@@ -524,7 +524,6 @@ object Conexion {
             cod = ex.errorCode
             println(ex)
         }
-        println("Base de datos creada con éxito")
     }
     fun borrarBaseDeDatos(){
         var cod = 0
@@ -539,7 +538,6 @@ object Conexion {
             cod = ex.errorCode
             println(ex)
         }
-        println("Base de datos borrada con éxito")
     }
 
 

@@ -7,6 +7,7 @@
     <list default="true" id="457b5963-61af-40da-8b5a-6c1a69845fa7" name="Changes" comment="Avances en el menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Conexiones/Conexion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
       <recent name="Centro" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.mariadb-java-client-2.7.3.jar">
+  <component name="RunManager">
     <configuration name="mariadb-java-client-2.7.3.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/mariadb-java-client-2.7.3.jar" />
       <method v="2" />

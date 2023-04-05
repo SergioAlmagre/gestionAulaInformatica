@@ -7,8 +7,8 @@ fun main(args: Array<String>) {
 
     var seleccion:Int = 0
 
-    try {
-        do {
+    do {
+        try {
             println(
                 "Menú\n" +
                         "1 - Insertar aula\n" +
@@ -35,35 +35,35 @@ fun main(args: Array<String>) {
                         "22 - Salir\n"
             )
             seleccion = readln().toInt()
-        } while (seleccion !in 1..22 && seleccion != 22)
-    }catch (e:Exception){
-        println(e)
-    }
+        }catch (e:Exception){
+            println(e)
+        }
 
-    when(seleccion){
-        1-> Conexion.addAula(Factoria.factoriaAula())
-        2-> Conexion.addOrdenador(Factoria.factoriaOrdenador(201))
-        3-> Conexion.addAlumno(Factoria.factoriaAlumno())
-        4-> modOAula()
-        5-> modOrdenador()
-        6-> modAlumno()
-        7-> mostrarAula()
-        8-> mostrarOrdenador()
-        9-> mostrarAlumno()
-        10-> mostrarTodosLosAlumnos()
-        11-> mostrarTodasLasAulas()
-        12-> mostrarTodosLosOrdenadores()
-        13-> borrarOrdenador()
-        14-> borrarAlumno()
-        15-> borrarAula()
-        16-> Conexion.borrarTodosLosOrdenadores()
-        17-> Conexion.borrarTodosLosAlumnos()
-        18-> Conexion.borrarTodasAulas()
-        19-> destruirBbdd()
-        20-> construirBbdd()
-        21-> meterDatosACascoporrillo()
-        22-> println("Hasta la vista")
-    }
+        when(seleccion){
+            1-> Conexion.addAula(Factoria.factoriaAula())
+            2-> Conexion.addOrdenador(Factoria.factoriaOrdenador(201))
+            3-> Conexion.addAlumno(Factoria.factoriaAlumno())
+            4-> modOAula()
+            5-> modOrdenador()
+            6-> modAlumno()
+            7-> mostrarAula()
+            8-> mostrarOrdenador()
+            9-> mostrarAlumno()
+            10-> mostrarTodosLosAlumnos()
+            11-> mostrarTodasLasAulas()
+            12-> mostrarTodosLosOrdenadores()
+            13-> borrarOrdenador()
+            14-> borrarAlumno()
+            15-> borrarAula()
+            16-> Conexion.borrarTodosLosOrdenadores()
+            17-> Conexion.borrarTodosLosAlumnos()
+            18-> Conexion.borrarTodasAulas()
+            19-> destruirBbdd()
+            20-> construirBbdd()
+            21-> meterDatosACascoporrillo()
+            22-> println("Hasta la vista")
+        }
+    } while (seleccion > 0 && seleccion <=21)
 }
 
     fun construirBbdd(){
@@ -72,19 +72,20 @@ fun main(args: Array<String>) {
             print ("- ")
             Thread.sleep(500)
         }
+        println("Base de datos creada con éxito")
     }
     fun destruirBbdd(){
         var eleccion = -1
         var confirmacion = -1
 
         try {
-            println("0 - Cancelar\n" +
-                    "1 - Borrar BBDD")
+            println("¿Estás serguro de querer borrar toda la base de datos?\n" +
+                    "0 - Cancelar\n" +
+                    "1 - Borrar BBDD\n")
             var eleccion = readln().toInt()
 
             if (eleccion == 1){
-                println("Borrar la base de datos es un paso irreversible, ¿quieres hacerlo?\n" +
-                        "¿Estás serguro de destruir la bases de datos?\n" +
+                println("Borrar la base de datos es un paso irreversible, ¿seguro que quieres hacerlo?" +
                         "0 - Cancelar\n" +
                         "1 - Borrar BBDD\n")
                 confirmacion = readln().toInt()
@@ -100,9 +101,8 @@ fun main(args: Array<String>) {
         if (eleccion == 0 || confirmacion == 0){
             println("proceso cancelado")
         }else{
-            println("Base de datos destruida")
+            println("Base de datos borrada")
         }
-
     }
 
     fun borrarAula(){
