@@ -2,7 +2,6 @@ import Centro.Alumno
 import Centro.Aula
 import Centro.Ordenador
 import Conexiones.Constantes
-import com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping
 import java.sql.*
 
 object Conexion {

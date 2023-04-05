@@ -1,9 +1,5 @@
-
 import Factorias.Factoria
-import java.sql.SQLException
 import kotlin.random.Random
-import kotlin.system.exitProcess
-
 fun main() {
 
     var seleccion = 0
@@ -93,7 +89,7 @@ fun main() {
             try {
                 mostrarTodasLasAulas()
                 println("¿En que aula quieres poner el ordenador?")
-                var codAula = readln().toInt()
+                val codAula = readln().toInt()
                 Conexion.addOrdenador(Factoria.factoriaOrdenador(codAula))
                 ok = true
                 println("Datos insertados")

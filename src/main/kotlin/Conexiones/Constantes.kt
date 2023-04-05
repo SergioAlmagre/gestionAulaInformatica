@@ -4,7 +4,7 @@ object Constantes {
     val servidor = "localhost"
     val puerto = 3306
 
-    var bbdd = "gestionaulas"
+    val bbdd = "gestionaulas"
     var usuario = "sergio"
     var passwd = "Chubaca2023"
 
